@@ -1,0 +1,26 @@
+.navbar{
+    background-color: #282727;
+    width: 2000px;
+    color: hsl(0, 0%, 75%);
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+border-bottom: 1.5px solid orange;
+}
+.nav-link {
+    color: hsl(0, 100%, 99%);
+}
+.navbar-nav{
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+.navRouting{
+	font-weight: 400;
+    font-size: 1em;
+}
+.header{
+    position: fixed;
+    top: 0%;
+}
+.dropdown-item:hover{
+    color:orange;
+    }

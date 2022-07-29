@@ -1,0 +1,21 @@
+<div *ngIf="ProductData.best==='True'">
+<div class="card shadow p-2 bg-white">
+    <img class="card-img-top" src="../../../assets/{{ProductData.image1}}" alt="Card image cap">
+    <div class="card-body">
+     <h6>{{ProductData.category.name}}</h6>
+     <h5>{{ProductData.name}}</h5>
+     <div class="d-flex">
+    <div>
+     <h5 style="font-size: 1em;">{{ProductData.price}} L.E</h5>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+     <span class="fa fa-star checked"></span>
+    </div>
+     <i class="bi bi-plus-circle-fill"></i>
+    </div>
+    </div>
+</div>
+</div>
+    

@@ -1,0 +1,58 @@
+.header{
+    position: fixed;
+    z-index: +120;
+}
+.about{
+    height: 22em;
+    margin: 8em 32em 1em;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.845);
+    border-radius: .5em;
+    z-index: +12;
+}
+h1{
+    font-size: 6em;
+    font-weight: 500;
+}
+span{
+    color: rgb(227, 174, 13);
+}
+h4{
+    font-size: 3em;
+    font-weight: 200;
+    margin-left: .3em;
+    line-height: .8;
+}
+p{
+    font-size: 1.3em;
+    font-weight: 100;
+    width: 95%;
+    margin: .5em 1em;
+}
+img{
+    height: 29em;
+    width: 45%;
+    margin: 4em 3em 0 4em;
+    position: absolute;
+    z-index: -99;
+}
+h2{
+    margin: 2em 0 0 0;
+    text-align: center;
+    font-size: 3.5em;
+}
+.member{
+height: 15em;
+width: 13em;
+margin: 3em;
+border: 25px solid hwb(39 0% 0% / 0.174);
+border-radius: 50%;
+}
+.grey{
+    height: 32em;
+    width: 54em;
+    background-color: rgba(0, 0, 0, 0.827);
+    margin: 4em 0 0 25em;
+    z-index: -200;
+    position: absolute;
+}

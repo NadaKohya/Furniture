@@ -1,0 +1,26 @@
+#container{
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    background-image: url(../../../assets/OuterPage.jpg);
+}
+.mainText{
+    position: relative;
+    margin-top: 2em;
+    margin-left: .6em;
+    font-size: 4.2em;
+    font-weight:700;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.smallText{
+    position: relative;
+    margin-top: 1em;
+    margin-left: 8em;
+    font-size: 1.4em;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    margin-left: 20em;
+    margin-top: 3em;
+    background-color: rgb(226, 169, 35);
+}

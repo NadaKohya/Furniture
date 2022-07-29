@@ -1,0 +1,29 @@
+.grey{
+    height: 50em;
+    width: 50em;
+    background-color: #a4a09c15;
+    margin-bottom: 3.5em;
+    margin-top: 10em;
+}
+h1{
+  margin-left: 80%;
+  width: 65%;
+  font-size: 7em;
+  font-weight: 90;
+}
+.main{
+    height: 79%;
+    width: 75%;
+    margin-left: 77%;
+    margin-top: -7em;
+}
+.top{
+    margin-top: -84em;
+    margin-left: -20em;
+height: 50%;
+}
+.inside{
+    margin-top: -30em;
+    margin-left: 7em;
+height: 45%;
+}

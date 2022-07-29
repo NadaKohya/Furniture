@@ -1,0 +1,22 @@
+.best{
+    background-color: #a4a09c15;
+    margin: 3.5em 0 1.5em 0;
+    padding: 2em;
+}
+h1{
+    text-align: center;
+    margin: 0 0 1em 0 ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.scroll{
+    width: 75em;
+    height: 25.7em;
+    margin: auto;
+    overflow-x: scroll;
+}
+.scroll::-webkit-scrollbar{
+display: none;
+}
+.item{
+    margin: 1.4em 1em ;
+}

@@ -1,0 +1,9 @@
+<div class="parent">
+    <h1>Cushions</h1>
+<app-header-entire class="header"></app-header-entire>
+<div class="d-flex flex-wrap shadow bg-white">
+<app-item-card *ngFor="let product of products" [productItem]="product" class="item"></app-item-card>
+</div>
+<app-footer></app-footer>
+</div>
+

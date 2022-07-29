@@ -1,0 +1,21 @@
+.footer{
+    width:100%;
+    max-width:100%;
+    height: 8.5em;
+    color: white;
+    background-color: #282727;
+    font-size: 1.3em;
+font-weight: 300;
+bottom: 0;
+}
+span{
+color: rgba(231, 228, 228, 0.875);
+}
+.col-3,.col-2{
+margin-top: 1.3em;
+}
+.social{
+    margin-top: .5em;
+    font-size: 2em;
+    margin-left: 12em;
+}

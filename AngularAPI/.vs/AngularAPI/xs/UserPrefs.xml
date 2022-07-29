@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{686B50CD-315B-4CA6-8888-9CCB60074217}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Controllers/ProductController.cs">
+    <Files>
+      <File FileName="AngularAPI/Controllers/ProductController.cs" Line="26" Column="10" />
+      <File FileName="AngularAPI/Program.cs" Line="37" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AngularAPI" expanded="True">
+            <Node name="AngularAPI" expanded="True" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DTO" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20220725092339_v2.cs" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AngularAPI PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>
