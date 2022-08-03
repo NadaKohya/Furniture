@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nadamohamed/Desktop/ITI/Angular/Furniturecopy/AngularAPI/AngularAPI/AngularAPI.csproj": {}
+    "/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/AngularAPI.csproj": {}
   },
   "projects": {
-    "/Users/nadamohamed/Desktop/ITI/Angular/Furniturecopy/AngularAPI/AngularAPI/AngularAPI.csproj": {
+    "/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/AngularAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nadamohamed/Desktop/ITI/Angular/Furniturecopy/AngularAPI/AngularAPI/AngularAPI.csproj",
+        "projectUniqueName": "/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/AngularAPI.csproj",
         "projectName": "AngularAPI",
-        "projectPath": "/Users/nadamohamed/Desktop/ITI/Angular/Furniturecopy/AngularAPI/AngularAPI/AngularAPI.csproj",
+        "projectPath": "/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/AngularAPI.csproj",
         "packagesPath": "/Users/nadamohamed/.nuget/packages/",
-        "outputPath": "/Users/nadamohamed/Desktop/ITI/Angular/Furniturecopy/AngularAPI/AngularAPI/obj/",
+        "outputPath": "/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nadamohamed/.nuget/NuGet/NuGet.Config"

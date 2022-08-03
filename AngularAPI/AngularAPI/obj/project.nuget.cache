@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "98is3byZan5rgrCVvvyPS641nKwjPjL3KNttrjD8Nt/jSqbfP0rhnyKqoAwr8Tyau/D1VKsInga4ttx6+uqPFA==",
+  "dgSpecHash": "Pc/zA3odpoTVpYjdflChRqJ/INJ8UoeLLFvzsIVv2h3oE/9wqopyR0zwUelk1qiyM4mXI7rryZqpdHt1UqPsVw==",
   "success": true,
-  "projectFilePath": "/Users/nadamohamed/Desktop/ITI/Angular/Furniturecopy/AngularAPI/AngularAPI/AngularAPI.csproj",
+  "projectFilePath": "/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/AngularAPI.csproj",
   "expectedPackageFiles": [
     "/Users/nadamohamed/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/nadamohamed/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
