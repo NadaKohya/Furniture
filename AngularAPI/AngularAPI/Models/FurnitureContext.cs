@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AngularAPI.Models
 {
-	public class FurnitureContext:DbContext
+	public class FurnitureContext:IdentityDbContext<ApplicationUser>
 	{
 		public FurnitureContext()
 		{
