@@ -1,10 +1,12 @@
 ﻿using AngularAPI.DTO;
 using AngularAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AngularAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
@@ -14,6 +16,7 @@ namespace AngularAPI.Controllers
             this.context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -21,6 +24,7 @@ namespace AngularAPI.Controllers
             return Ok(Products);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id:int}", Name = "getProduct")] // I put int to distinguish if I want to get product by its name in another action .. HttpGet("{name:alpha}")
         public async Task<IActionResult> getProduct(int id)
         {
@@ -40,6 +44,7 @@ namespace AngularAPI.Controllers
             return BadRequest("Id is not valid");
         }
 
+        [AllowAnonymous]
         [HttpGet("category/{categoryId}")]
         public async Task<IActionResult> getProductByCategoryId(int categoryId)
         {

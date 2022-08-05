@@ -17,10 +17,12 @@ namespace AngularAPI.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IConfiguration configuration;
-        public AccountController(UserManager<ApplicationUser> userManager, IConfiguration configuration)
+        public AccountController(UserManager<ApplicationUser> userManager, IConfiguration configuration, SignInManager<ApplicationUser> signInManager)
         {
             this.userManager = userManager;
+            this.signInManager = signInManager;
             this.configuration = configuration;
         }
 
@@ -37,6 +39,7 @@ namespace AngularAPI.Controllers
                 IdentityResult result = await userManager.CreateAsync(user, userDTO.Password);
                 if (result.Succeeded)
                 {
+                    await signInManager.SignInAsync(user, false);
                     return Ok("Registeration succeeded!");
                 }
                 return BadRequest(result.Errors.FirstOrDefault());
@@ -46,6 +49,7 @@ namespace AngularAPI.Controllers
 
         //Check Account Credentials (Login) "Post==body"
         [HttpPost("login")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginUserDTO userDTO)
         {
             if (ModelState.IsValid)
@@ -99,6 +103,12 @@ namespace AngularAPI.Controllers
                 return Unauthorized();
             }
             return Unauthorized();
+        }
+
+        public async Task<IActionResult> signOut()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Login");
         }
     }
 }

@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{686B50CD-315B-4CA6-8888-9CCB60074217}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Program.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Controllers/AccountController.cs">
     <Files>
-      <File FileName="AngularAPI/Controllers/AccountController.cs" Line="86" Column="71" />
+      <File FileName="AngularAPI/Controllers/AccountController.cs" Line="8" Column="15" />
       <File FileName="AngularAPI/Program.cs" Line="14" Column="133" />
-      <File FileName="AngularAPI/Controllers/ProductController.cs" Line="1" Column="1" />
-      <File FileName="AngularAPI/Controllers/CategoryController.cs" Line="8" Column="16" />
+      <File FileName="AngularAPI/DTO/LoginUserDTO.cs" Line="11" Column="39" />
+      <File FileName="AngularAPI/Controllers/ProductController.cs" Line="48" Column="9" />
+      <File FileName="AngularAPI/Controllers/CategoryController.cs" Line="7" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AngularAPI" expanded="True">
             <Node name="AngularAPI" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
               <Node name="DTO" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
@@ -30,4 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AngularAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

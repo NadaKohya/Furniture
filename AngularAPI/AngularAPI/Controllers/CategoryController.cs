@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class CategoryController : Controller
     {
@@ -13,6 +14,7 @@ namespace AngularAPI.Controllers
             this.context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -20,6 +22,7 @@ namespace AngularAPI.Controllers
             return Ok(Categories);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id:int}")] // I put int to distinguish if I want to get category by name in another action .. HttpGet("{name:alpha}")
         public async Task<IActionResult> getProduct(int id)
         {
