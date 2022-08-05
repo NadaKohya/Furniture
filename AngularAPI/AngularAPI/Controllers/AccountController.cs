@@ -49,7 +49,6 @@ namespace AngularAPI.Controllers
 
         //Check Account Credentials (Login) "Post==body"
         [HttpPost("login")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginUserDTO userDTO)
         {
             if (ModelState.IsValid)
@@ -103,12 +102,6 @@ namespace AngularAPI.Controllers
                 return Unauthorized();
             }
             return Unauthorized();
-        }
-
-        public async Task<IActionResult> signOut()
-        {
-            await signInManager.SignOutAsync();
-            return RedirectToAction("Login");
         }
     }
 }

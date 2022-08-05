@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AngularAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularAPI.Controllers
 {
+    //[Authorize(Roles="Admin")]
     [Route("api/[controller]")]
     public class RoleController : Controller
     {
@@ -18,14 +20,14 @@ namespace AngularAPI.Controllers
         {
             this.roleManager = roleManager;
         }
+
         [HttpGet]
         public IActionResult Get()
         {
             return Ok();
         }
-
+        
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Role newRole)
         {
             if (ModelState.IsValid)

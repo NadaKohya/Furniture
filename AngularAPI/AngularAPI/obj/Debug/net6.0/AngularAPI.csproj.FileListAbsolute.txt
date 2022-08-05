@@ -375,8 +375,12 @@
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Humanizer.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/MessagePack.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/MessagePack.Annotations.dll
+/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.AzureAppServicesIntegration.dll
+/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.DataProtection.AzureStorage.dll
+/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Razor.Language.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Azure.KeyVault.Core.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Azure.Storage.Blob.dll
@@ -411,6 +415,8 @@
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.Design.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
+/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Logging.AzureAppServices.dll
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Identity.Client.dll
@@ -666,9 +672,3 @@
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/obj/Debug/net6.0/AngularAPI.pdb
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/obj/Debug/net6.0/AngularAPI.genruntimeconfig.cache
 /Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/obj/Debug/net6.0/ref/AngularAPI.dll
-/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll
-/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
-/Users/nadamohamed/Desktop/ITI/Angular/Furniture/AngularAPI/AngularAPI/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
