@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularAPI.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     [Route("api/[controller]")]
     public class CategoryController : Controller
     {

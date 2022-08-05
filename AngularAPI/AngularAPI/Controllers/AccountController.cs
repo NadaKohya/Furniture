@@ -39,6 +39,7 @@ namespace AngularAPI.Controllers
                 IdentityResult result = await userManager.CreateAsync(user, userDTO.Password);
                 if (result.Succeeded)
                 {
+                    await userManager.AddToRoleAsync(user, "User");
                     await signInManager.SignInAsync(user, false);
                     return Ok("Registeration succeeded!");
                 }
@@ -102,6 +103,28 @@ namespace AngularAPI.Controllers
                 return Unauthorized();
             }
             return Unauthorized();
+        }
+
+        //Add Admin
+        [HttpPost("addAdmin")]
+        public async Task<IActionResult> AddAdmin(RegisterUserDTO userDTO)
+        {
+            if (ModelState.IsValid)
+            {
+                //Save
+                ApplicationUser user = new ApplicationUser();
+                user.UserName = userDTO.Name;
+                user.Email = userDTO.Email;
+                IdentityResult result = await userManager.CreateAsync(user, userDTO.Password);
+                if (result.Succeeded)
+                {
+                    //Assign Role to account
+                    await userManager.AddToRoleAsync(user, "Admin");
+                    return Ok("Assigning role succeeded!");
+                }
+                return BadRequest(result.Errors.FirstOrDefault());
+            }
+            return BadRequest(ModelState);
         }
     }
 }

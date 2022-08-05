@@ -5,9 +5,6 @@ namespace AngularAPI.Models
 {
 	public class ApplicationUser:IdentityUser
 	{
-		public ApplicationUser()
-		{
-		}
 	}
 }
 
