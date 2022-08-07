@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import{Router} from '@angular/router'
+import {Component, OnInit} from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-outer-page',
   templateUrl: './outer-page.component.html',

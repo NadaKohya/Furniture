@@ -5,7 +5,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -26,6 +25,8 @@ import { InteriorComponent } from './Components/interior/interior.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { StyleHomeComponent } from './Components/style-home/style-home.component';
 import { ItemCardComponent } from './Components/item-card/item-card.component';
+import { TeamCardComponent } from './Components/team-card/team-card.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { ItemCardComponent } from './Components/item-card/item-card.component';
     InteriorComponent,
     FooterComponent,
     StyleHomeComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    TeamCardComponent,
+    RegisterComponent
   ],
   imports: [
   BrowserModule,
@@ -55,7 +58,6 @@ import { ItemCardComponent } from './Components/item-card/item-card.component';
     SlickCarouselModule,
     HttpClientModule,
     NgbModule,
-    CarouselModule
   ],
   providers: [
     ProductService,

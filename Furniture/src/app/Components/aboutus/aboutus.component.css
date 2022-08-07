@@ -11,7 +11,7 @@
     z-index: +12;
 }
 h1{
-    font-size: 6em;
+    font-size: 5em;
     font-weight: 500;
 }
 span{
@@ -37,16 +37,9 @@ img{
     z-index: -99;
 }
 h2{
-    margin: 2em 0 0 0;
+    margin: 1.5em 0 0 0;
     text-align: center;
     font-size: 3.5em;
-}
-.member{
-height: 15em;
-width: 13em;
-margin: 3em;
-border: 25px solid hwb(39 0% 0% / 0.174);
-border-radius: 50%;
 }
 .grey{
     height: 32em;
@@ -55,4 +48,38 @@ border-radius: 50%;
     margin: 4em 0 0 25em;
     z-index: -200;
     position: absolute;
+}
+.aboutCard1,.aboutCard2,.aboutCard3,.aboutCard4{
+    width: 14em;
+    height: 17em;
+    margin: 10em 3em 0;
+    padding: .5em;
+    border-radius: 1em;
+}
+.aboutCard1{
+    background-color: rgba(0, 0, 0, 0.319);
+}
+.aboutCard2{
+    background-color: rgba(0, 0, 0, 0.514);
+}
+.aboutCard3{
+    background-color: rgba(0, 0, 0, 0.733);
+}
+.aboutCard4{
+    background-color: rgba(0, 0, 0, 0.832);
+}
+h3{
+    margin: .3em;
+    font-size: 1.8em;
+    color: white;
+}
+.aboutCard1>p,.aboutCard2>p,.aboutCard3>p,.aboutCard4>p{
+    color: white;
+    text-orientation: sideways;
+    margin: 0.3em;
+    font-size: 1.1em;
+    font-weight: 200;
+}
+.team{
+    width: 90%;
 }

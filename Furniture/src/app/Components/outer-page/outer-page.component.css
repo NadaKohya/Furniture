@@ -5,22 +5,41 @@
     background-image: url(../../../assets/OuterPage.jpg);
 }
 .mainText{
-    position: relative;
-    margin-top: 2em;
-    margin-left: .6em;
-    font-size: 4.2em;
+    position: absolute;
+    right: .5em;
+    margin-top: .5em;
+    line-height: 1.4;
+    font-size: 3.6em;
     font-weight:700;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .smallText{
-    position: relative;
-    margin-top: 1em;
-    margin-left: 8em;
+    position: absolute;
+   top: 9em;
+    right: 5em;
     font-size: 1.4em;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-a{
-    margin-left: 20em;
+button{
+    margin-left: 2em;
     margin-top: 3em;
+    color: white;
+  width: 5em;
+  padding: .3em;
+    line-height:1;
+    font-size: 1.4em;
     background-color: rgb(226, 169, 35);
+    text-decoration: none;
+    border: 1px solid rgb(226, 169, 35);
+    border-radius: .4em;
+}
+form{
+    background-color: rgba(255, 255, 255, 0.776);
+    height: 25em;
+    width: 27em;
+    border-radius: 1em;
+    margin: 10em 8em;
+}
+input{
+    border-radius: .5em;
 }
