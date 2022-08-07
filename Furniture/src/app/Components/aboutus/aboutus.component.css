@@ -1,4 +1,6 @@
-.header{
+.parent{
+    padding-bottom: 3em;
+}.header{
     position: fixed;
     z-index: +120;
 }

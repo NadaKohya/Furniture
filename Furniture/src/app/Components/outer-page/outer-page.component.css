@@ -21,25 +21,38 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 button{
-    margin-left: 2em;
-    margin-top: 3em;
+    margin: 1em 5.5em;
     color: white;
   width: 5em;
   padding: .3em;
     line-height:1;
-    font-size: 1.4em;
+    font-size: 1.2em;
     background-color: rgb(226, 169, 35);
     text-decoration: none;
     border: 1px solid rgb(226, 169, 35);
     border-radius: .4em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 form{
-    background-color: rgba(255, 255, 255, 0.776);
-    height: 25em;
-    width: 27em;
+    background-color: rgba(255, 255, 255, 0.714);
+    height: 23em;
+    width: 24em;
+    border: 1px solid goldenrod;
     border-radius: 1em;
     margin: 10em 8em;
+    padding: 2em;
+}
+.group{
+    margin: 1em;
+    font-weight: 300;
+}
+label{
+margin-left: .5em;
 }
 input{
     border-radius: .5em;
+    width: 18em;
+    height: 2.5em;
+    border: 1px solid goldenrod;
+    padding: 1em;
 }

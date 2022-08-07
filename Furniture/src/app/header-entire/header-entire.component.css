@@ -10,7 +10,7 @@ border-bottom: 1.5px solid orange;
 }
 .navbar-nav{
     justify-content: space-between;
-    width: 60%;
+    width: 80%;
     margin: auto;
 }
 .navRouting{

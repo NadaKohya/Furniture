@@ -26,7 +26,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { StyleHomeComponent } from './Components/style-home/style-home.component';
 import { ItemCardComponent } from './Components/item-card/item-card.component';
 import { TeamCardComponent } from './Components/team-card/team-card.component';
-import { RegisterComponent } from './Components/register/register.component';
+import { ProductscrudComponent } from './Components/productscrud/productscrud.component';
+import { CategoriescrudComponent } from './Components/categoriescrud/categoriescrud.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { RegisterComponent } from './Components/register/register.component';
     StyleHomeComponent,
     ItemCardComponent,
     TeamCardComponent,
-    RegisterComponent
+    ProductscrudComponent,
+    CategoriescrudComponent
   ],
   imports: [
   BrowserModule,
@@ -57,7 +59,7 @@ import { RegisterComponent } from './Components/register/register.component';
     AppRoutingModule,
     SlickCarouselModule,
     HttpClientModule,
-    NgbModule,
+    NgbModule
   ],
   providers: [
     ProductService,
