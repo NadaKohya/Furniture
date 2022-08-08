@@ -27,9 +27,9 @@ h1{
     margin: 1em 2em;
 }
 button{
-    border: 1px solid goldenrod;
+    border: 1px solid darkgreen;
     border-radius: .4em;
-    background-color: goldenrod;
+    background-color: darkgreen;
     color: white;
     padding: .5em;
     width: 7em;
