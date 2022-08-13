@@ -1,7 +1,54 @@
 <app-header-entire class="header"></app-header-entire>
-<div *ngIf="product">
-    <h3>{{ product.name }}</h3>
-    <h4>{{ product.price | currency }}</h4>
-    <p>{{ product.description }}</p>
+<form (ngSubmit)="Update(name.value,price.value,description.value,categories.value,image1.value)">
+  <h3>Edit Product</h3>
+  <div>
+      <div>
+          <div class="form-group">
+              <label>Product Name</label>
+              <input [value]="product.name" type="text" id="proName" class="form-control" placeholder="Name" #name />
+          </div>
+          <div class="form-group">
+              <input [value]="product.price"  type="number" class="form-control" placeholder="Price" #price />
+          </div>
+
+
+          <div class="form-group">
+              <input  [value]="product.description" type="text" class="form-control" placeholder="Description" #description />
+          </div>
+          <div>
+              <select (change)="changeCat($event)" class="form-control">
+                  <option>--Select--</option>
+                  <option  [value]="category.id" *ngFor="let category of categories" #categories>
+                      {{category.name}}
+                  </option>
+              </select>
+          </div>
+          <div>
+              <label for="type">
+                  <h6>Image1</h6>
+              </label>
+              <img [src]="product.image1">
+              <input type="file"  style="background-color: #FAF0E6;" (change)="OnSelect($event)" #image1>
+          </div>
+          <!-- <div>
+            <label for="type">
+                <h6>Image2</h6>
+            </label>
+            <img [src]="product.image2">
+            <input type="file"  style="background-color: #FAF0E6;" (change)="OnSelect($event)" #image2>
+        </div>
+        <div>
+          <label for="type">
+              <h6>Image3</h6>
+          </label>
+          <img [src]="product.image3">
+          <input type="file"  style="background-color: #FAF0E6;" (change)="OnSelect($event)" #image3>
+      </div> -->
+      </div>
+      <div>
+          <input type="submit" value="+ Add" />
+      </div>
   </div>
+</form>
+
 <app-footer></app-footer>

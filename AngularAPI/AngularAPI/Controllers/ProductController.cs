@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AngularAPI.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
