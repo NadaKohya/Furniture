@@ -22,7 +22,8 @@ const routes: Routes = [
   {path:"home/aboutus",component:AboutusComponent},
   {path:"home/productscrud",component:ProductscrudComponent},
   {path:"home/categoriescrud",component:CategoriescrudComponent},
-  {path:'productscrud/addproduct',component:AddproductComponent}
+  {path:'productscrud/addproduct',component:AddproductComponent},
+  {path:'productscrud/edit/:id',component:AddproductComponent},
 ];
 
 @NgModule({

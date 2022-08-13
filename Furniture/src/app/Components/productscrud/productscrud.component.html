@@ -30,7 +30,7 @@
             <td scope="col">{{product.image2}}</td>
             <td scope="col">{{product.image3}}</td>
             <td scope="col">{{product.best}}</td>
-            <td scope="col" routerLink="`productcrud/addproduct/${{product.id}}`"><i class="bi bi-pencil-square" style="color: darkgreen; font-size: 1.2em; line-height: 1; cursor: pointer;"></i></td>
+            <td scope="col" routerLink="`productscrud/edit/${{product.id}}`"><i class="bi bi-pencil-square" style="color: rgba(255, 157, 0, 0.924); font-size: 1.2em; line-height: 1; cursor: pointer;"></i></td>
             <td scope="col"><i class="bi bi-trash3-fill" style="color: brown; font-size: 1.2em; line-height: 1; cursor: pointer;" (click)="Delete()"></i></td>
           </tr>
         </tbody>
