@@ -1,15 +1,15 @@
 <div id="container">
   <div class="d-flex">
     <form class="shadow">
-      <div class="group">
-      <label for="userName">User Name</label>
-      <input type="text" id="userName" class="shadow-sm" placeholder="Enter your user name">
+      <div class="form-group">
+      <label for="username">User Name</label>
+      <input type="text" formControlName="username" id="username" class="form-control shadow-sm" placeholder="Enter your user name">
     </div>
-    <div class="group">
+    <div class="form-group">
     <label for="password">Password</label>
-      <input type="password" id="password" class="shadow-sm" placeholder="Enter your password">
+      <input type="password" formControlName="password" id="password" class="form-control shadow-sm" placeholder="Enter your password">
     </div>
-    <button routerLink="/outer/home">Login</button>
+    <button type="submit">Login</button>
     </form>
   <div>
 <div class="mainText">

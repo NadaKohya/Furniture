@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -28,6 +27,8 @@ import { ItemCardComponent } from './Components/item-card/item-card.component';
 import { TeamCardComponent } from './Components/team-card/team-card.component';
 import { ProductscrudComponent } from './Components/productscrud/productscrud.component';
 import { CategoriescrudComponent } from './Components/categoriescrud/categoriescrud.component';
+import { EditproductComponent } from './Components/editproduct/editproduct.component';
+import { AddproductComponent } from './Components/addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,9 @@ import { CategoriescrudComponent } from './Components/categoriescrud/categoriesc
     ItemCardComponent,
     TeamCardComponent,
     ProductscrudComponent,
-    CategoriescrudComponent
+    CategoriescrudComponent,
+    EditproductComponent,
+    AddproductComponent
   ],
   imports: [
   BrowserModule,

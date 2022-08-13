@@ -33,7 +33,7 @@ button{
     color: white;
     padding: .5em;
     width: 7em;
-    margin: 1em 65em;
+    margin: 1em 0 1em 63em;
     font-weight: 500;
 }
 .table-striped>thead>tr>th{

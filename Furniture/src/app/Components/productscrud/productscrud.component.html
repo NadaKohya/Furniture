@@ -20,18 +20,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td scope="col">ID</td>
-            <td scope="col">Name</td>
-            <td scope="col">Price</td>
-            <td scope="col">Description</td>
-            <td scope="col">Category</td>
-            <td scope="col">Image1</td>
-            <td scope="col">Image2</td>
-            <td scope="col">Image3</td>
-            <td scope="col">Best</td>
-            <td scope="col"><i class="bi bi-pencil-square" style="color: darkgreen; font-size: 1.2em; line-height: 1;"></i></td>
-            <td scope="col"><i class="bi bi-trash3-fill" style="color: brown; font-size: 1.2em; line-height: 1;"></i></td>
+          <tr *ngFor="let product of products">
+            <td scope="col">{{product.id}}</td>
+            <td scope="col">{{product.name}}</td>
+            <td scope="col">{{product.price}}</td>
+            <td scope="col">{{product.description}}</td>
+            <td scope="col">{{product.category}}</td>
+            <td scope="col">{{product.image1}}</td>
+            <td scope="col">{{product.image2}}</td>
+            <td scope="col">{{product.image3}}</td>
+            <td scope="col">{{product.best}}</td>
+            <td scope="col" routerLink="`productcrud/addproduct/${{product.id}}`"><i class="bi bi-pencil-square" style="color: darkgreen; font-size: 1.2em; line-height: 1; cursor: pointer;"></i></td>
+            <td scope="col"><i class="bi bi-trash3-fill" style="color: brown; font-size: 1.2em; line-height: 1; cursor: pointer;" (click)="Delete()"></i></td>
           </tr>
         </tbody>
       </table>

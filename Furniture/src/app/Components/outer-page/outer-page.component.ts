@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-outer-page',
@@ -8,8 +9,12 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class OuterPageComponent implements OnInit {
 
-  constructor() { }
+  form = new FormGroup({
+    username: new FormControl(null, Validators.required),
+    password: new FormControl(null, Validators.required),
+  });
 
+  constructor() {}
   ngOnInit(): void {
   }
 
