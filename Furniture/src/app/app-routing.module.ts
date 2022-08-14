@@ -4,9 +4,12 @@ import { AboutusComponent } from './Components/aboutus/aboutus.component';
 import { AddproductComponent } from './Components/addproduct/addproduct.component';
 import { CategoriescrudComponent } from './Components/categoriescrud/categoriescrud.component';
 import { DinningComponent } from './Components/dinning/dinning.component';
+import { EditcategoryComponent } from './Components/editcategory/editcategory.component';
+import { EditproductComponent } from './Components/editproduct/editproduct.component';
 import { HomeComponent } from './Components/home/home.component';
 import { LivingroomComponent } from './Components/livingroom/livingroom.component';
 import { MattressComponent } from './Components/mattress/mattress.component';
+import { NewcategoryComponent } from './Components/newcategory/newcategory.component';
 import { OfficeComponent } from './Components/office/office.component';
 import { OuterPageComponent } from './Components/outer-page/outer-page.component';
 import { ProductscrudComponent } from './Components/productscrud/productscrud.component';
@@ -22,8 +25,10 @@ const routes: Routes = [
   {path:"home/aboutus",component:AboutusComponent},
   {path:"home/productscrud",component:ProductscrudComponent},
   {path:"home/categoriescrud",component:CategoriescrudComponent},
-  {path:'productscrud/addproduct',component:AddproductComponent},
-  {path:'editproduct/:id',component:AddproductComponent},
+  {path:'newproduct',component:AddproductComponent},
+  {path:'newcategory',component:NewcategoryComponent},
+  {path:'editproduct/:id',component:EditproductComponent},
+  {path:'editcategory/:id',component:EditcategoryComponent},
 ];
 
 @NgModule({

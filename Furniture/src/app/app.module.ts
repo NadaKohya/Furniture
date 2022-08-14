@@ -29,6 +29,8 @@ import { ProductscrudComponent } from './Components/productscrud/productscrud.co
 import { CategoriescrudComponent } from './Components/categoriescrud/categoriescrud.component';
 import { EditproductComponent } from './Components/editproduct/editproduct.component';
 import { AddproductComponent } from './Components/addproduct/addproduct.component';
+import { NewcategoryComponent } from './Components/newcategory/newcategory.component';
+import { EditcategoryComponent } from './Components/editcategory/editcategory.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { AddproductComponent } from './Components/addproduct/addproduct.componen
     ProductscrudComponent,
     CategoriescrudComponent,
     EditproductComponent,
-    AddproductComponent
+    AddproductComponent,
+    NewcategoryComponent,
+    EditcategoryComponent
   ],
   imports: [
   BrowserModule,

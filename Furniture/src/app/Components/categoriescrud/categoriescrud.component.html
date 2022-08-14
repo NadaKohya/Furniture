@@ -1,7 +1,26 @@
-<app-header-entire class="header"></app-header-entire>
+<!-- <app-header-entire class="header"></app-header-entire>
 <div class="parent">
     <h1>Categories</h1>
-<div class="d-flex shadow bg-white">
+<div class="shadow bg-white">
+    <button>Add New</button>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories">
+            <td scope="col">{{category.id}}</td>
+            <td scope="col">{{category.name}}</td>
+            <td scope="col" routerLink="/editcategory/{{category.id}}"><i class="bi bi-pencil-square" style="color: rgba(255, 157, 0, 0.924); font-size: 1.2em; line-height: 1; cursor: pointer;"></i></td>
+            <td scope="col"><i class="bi bi-trash3-fill" style="color: brown; font-size: 1.2em; line-height: 1; cursor: pointer;" (click)="Delete(product.id)"></i></td>
+          </tr>
+        </tbody>
+      </table>
 </div>
 </div>
-<app-footer></app-footer>
+<app-footer></app-footer> -->
