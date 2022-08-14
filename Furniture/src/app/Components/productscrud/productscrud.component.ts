@@ -19,16 +19,13 @@ product:any;
     )
   }
 
-  Edit(){
-    this.myProductService.updateProduct(this.productId,this.product).subscribe(
-
-    )
-  }
-
-  Delete(){
-    this.myProductService.deleteProduct(this.productId).subscribe(
-
-    )
+  Delete(productId:any)
+  {
+    this.myProductService.deleteProduct(productId).subscribe(
+      res=>{
+        this.myProductService.getAllProducts();
+        window.location.reload();
+    })
   }
 
 }
