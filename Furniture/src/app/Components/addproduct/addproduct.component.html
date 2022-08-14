@@ -1,2 +1,108 @@
 <app-header-entire class="header"></app-header-entire>
+<div class="parent">
+  <h1>New Product</h1>
+  <form
+    class="shadow bg-white"
+  >
+    <div class="d-flex">
+      <div class="form-group">
+        <label>Name</label>
+        <input
+          type="text"
+          id="proName"
+          class="form-control shadow-sm"
+          placeholder="Name"
+          #name
+        />
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input
+          type="number"
+          class="form-control shadow-sm"
+          placeholder="Price"
+          #price
+        />
+      </div>
+      <div>
+        <label>Category</label>
+        <select (change)="changeCat($event)" class="form-control shadow-sm">
+          <option>--Select--</option>
+          <option
+            [value]="category.id"
+            *ngFor="let category of categories"
+            #categories
+          >
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+      </div>
+      <div class="d-flex">
+        <div class="form-group">
+          <label>Description</label>
+          <textarea
+            type="text"
+            class="form-control shadow-sm"
+            placeholder="Description"
+            #description
+         ></textarea>
+        </div>
+        <div>
+          <label>Best Selling</label>
+          <select (change)="changeCat($event)" class="form-control shadow-sm">
+            <option>--Select--</option>
+            <option
+              value="True"
+              #best
+            >
+            True
+            </option>
+            <option
+            value="False"
+            #best
+          >
+          False
+          </option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex">
+      <div>
+        <div>
+        <label for="type">Image1</label>
+      </div>
+        <img src="" />
+        <input
+          type="file"
+          style="width: 14em; background-color: rgba(128, 128, 128, 0.422);"
+          (change)="OnSelect($event)"
+          #image1
+        />
+      </div>
+      <!-- <div>
+        <div>
+            <label for="type">Image2</label>
+              </div>
+            <img [src]="product.image2">
+            <input type="file"
+             style="width: 14em; background-color: rgba(128, 128, 128, 0.422);"
+            (change)="OnSelect($event)" #image2>
+        </div>
+        <div>
+          <div>
+         <label for="type">Image3</label>
+           </div>
+          <img [src]="product.image3">
+          <input 
+          type="file"
+          style="width: 14em; background-color: rgba(128, 128, 128, 0.422);"
+           (change)="OnSelect($event)" #image3>
+      </div> -->
+    </div>
+    <div>
+      <button type="submit">Add</button>
+    </div>
+  </form>
+</div>
 <app-footer></app-footer>

@@ -2,3 +2,56 @@
     position: fixed;
     z-index: +120;
 }
+.parent{
+    background-color: rgba(255, 222, 222, 0.14); 
+    margin-top: -2em;
+    padding: 3em 0;
+}
+h1{
+    margin: 2em 0 0 1.7em;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+    width: 6em;
+    text-align: center;
+    border-radius: .3em .3em 0 0;
+}
+form{
+    padding: 1.7em;
+    border: .5px solid;
+    width: 90%;
+    border-radius: 1em;
+    margin: auto;
+}
+button{
+    border: 1px solid darkgreen;
+    border-radius: .4em;
+    background-color: darkgreen;
+    color: white;
+    padding: .5em;
+    width: 9em;
+    margin: 2em 0 1em 30em;
+    font-weight: 500;
+}
+.d-flex{
+    justify-content: space-between;
+}
+label{
+    margin: 1em .3em .6em .3em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+input,select,textarea{
+    border-radius: .5em;
+}
+input,select{
+    width: 20em;
+}
+textarea{
+    width: 45em;
+    height: 6em;
+}
+img{
+    width: 6em;
+    height: 6em;
+}

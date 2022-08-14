@@ -1,1 +1,23 @@
-<p>newcategory works!</p>
+<app-header-entire class="header"></app-header-entire>
+<div class="parent">
+  <h1>New Category</h1>
+  <form
+    class="shadow bg-white d-flex"
+  >
+      <div class="form-group">
+        <label>Name</label>
+        <input
+          type="text"
+          id="categoryName"
+          class="form-control shadow-sm"
+          placeholder="Name"
+          #name
+        />
+        </div>
+    <div>
+      <button type="submit">Add</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
+
