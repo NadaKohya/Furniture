@@ -6,8 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CategoryService {
 
-  constructor(private HttpClient:HttpClient) { }
   private BaseURL="http://localhost:5171/api/Category"
+  
+  constructor(private HttpClient:HttpClient) { }
 
     getAllCategories(){
       return this.HttpClient.get(this.BaseURL);

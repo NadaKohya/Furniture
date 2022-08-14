@@ -59,10 +59,11 @@ export class EditproductComponent implements OnInit {
     price: any,
     description: any,
     categoryId: any,
-    image1: any
+    image1: any,
+    best:any
   ) {
-    let product = { name, price, description, categoryId, image1 };
-    product.image1 = '/assets/' + this.image1;
+    let product = { name, price, description, categoryId, image1,best };
+    product.image1 = '../../../assets/' + this.image1;
     product.categoryId = this.categoryId;
     console.log(product);
     this.myProductService.updateProduct(this.produuctId, product).subscribe();

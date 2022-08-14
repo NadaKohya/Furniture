@@ -1,0 +1,47 @@
+.header{
+    position: fixed;
+    z-index: +120;
+}
+.parent{
+    background-color: rgba(255, 222, 222, 0.14); 
+    margin: -1em 0 9.3em;
+    padding: 3em 0;
+}
+h1{
+    margin: 2em 0 0 .95em;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+    width: 7.5em;
+    text-align: center;
+    border-radius: .3em .3em 0 0;
+}
+form{
+    padding: 1.7em;
+    border: .5px solid;
+    width: 95%;
+    border-radius: 1em;
+    margin: auto;
+}
+.d-flex{
+    justify-content: space-between;
+}
+button{
+    border: 1px solid darkgreen;
+    border-radius: .4em;
+    background-color: darkgreen;
+    color: white;
+    padding: .5em;
+    width: 9em;
+    margin: 2.95em 0 1em;
+    font-weight: 500;
+}
+label{
+    margin: 0.5em .3em .6em .3em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+input{
+    border-radius: .5em;
+    width: 25em;
+}
