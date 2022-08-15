@@ -33,7 +33,6 @@ import { NewcategoryComponent } from './Components/newcategory/newcategory.compo
 import { EditcategoryComponent } from './Components/editcategory/editcategory.component';
 import { ProductdetailsComponent } from './Components/productdetails/productdetails.component';
 import { NotfoundpageComponent } from './Components/notfoundpage/notfoundpage.component';
-import { HomelayoutComponent } from './Components/homelayout/homelayout.component';
 import { OtherslayoutComponent } from './Components/otherslayout/otherslayout.component';
 
 @NgModule({
@@ -63,7 +62,6 @@ import { OtherslayoutComponent } from './Components/otherslayout/otherslayout.co
     EditcategoryComponent,
     ProductdetailsComponent,
     NotfoundpageComponent,
-    HomelayoutComponent,
     OtherslayoutComponent
   ],
   imports: [

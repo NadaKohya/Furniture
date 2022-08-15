@@ -7,7 +7,6 @@ import { DinningComponent } from './Components/dinning/dinning.component';
 import { EditcategoryComponent } from './Components/editcategory/editcategory.component';
 import { EditproductComponent } from './Components/editproduct/editproduct.component';
 import { HomeComponent } from './Components/home/home.component';
-import { HomelayoutComponent } from './Components/homelayout/homelayout.component';
 import { LivingroomComponent } from './Components/livingroom/livingroom.component';
 import { MattressComponent } from './Components/mattress/mattress.component';
 import { NewcategoryComponent } from './Components/newcategory/newcategory.component';
