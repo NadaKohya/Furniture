@@ -31,6 +31,7 @@ import { EditproductComponent } from './Components/editproduct/editproduct.compo
 import { AddproductComponent } from './Components/addproduct/addproduct.component';
 import { NewcategoryComponent } from './Components/newcategory/newcategory.component';
 import { EditcategoryComponent } from './Components/editcategory/editcategory.component';
+import { ProductdetailsComponent } from './Components/productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { EditcategoryComponent } from './Components/editcategory/editcategory.co
     EditproductComponent,
     AddproductComponent,
     NewcategoryComponent,
-    EditcategoryComponent
+    EditcategoryComponent,
+    ProductdetailsComponent
   ],
   imports: [
   BrowserModule,

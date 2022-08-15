@@ -1,5 +1,5 @@
 <div *ngIf="ProductData.best==='True'">
-<div class="card shadow p-2 bg-white">
+<div class="card shadow p-2 bg-white" [routerLink]="['/product',ProductData.id]">
     <img class="card-img-top" src="../../../assets/{{ProductData.image1}}" alt="Card image cap">
     <div class="card-body">
      <h6>{{ProductData.category.name}}</h6>

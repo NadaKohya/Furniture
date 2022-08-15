@@ -12,6 +12,7 @@ import { MattressComponent } from './Components/mattress/mattress.component';
 import { NewcategoryComponent } from './Components/newcategory/newcategory.component';
 import { OfficeComponent } from './Components/office/office.component';
 import { OuterPageComponent } from './Components/outer-page/outer-page.component';
+import { ProductdetailsComponent } from './Components/productdetails/productdetails.component';
 import { ProductscrudComponent } from './Components/productscrud/productscrud.component';
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'newcategory',component:NewcategoryComponent},
   {path:'editproduct/:id',component:EditproductComponent},
   {path:'editcategory/:id',component:EditcategoryComponent},
+  {path:'product/:id',component:ProductdetailsComponent},
 ];
 
 @NgModule({

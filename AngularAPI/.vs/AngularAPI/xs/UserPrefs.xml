@@ -5,26 +5,23 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Controllers/RoleController.cs">
+  <MonoDevelop.Ide.ItemProperties.AngularAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Models/Product.cs">
     <Files>
-      <File FileName="AngularAPI/Controllers/AccountController.cs" Line="122" Column="19" />
-      <File FileName="AngularAPI/Program.cs" Line="14" Column="133" />
-      <File FileName="AngularAPI/Models/Role.cs" Line="9" Column="17" />
-      <File FileName="AngularAPI/DTO/RegisterUserDTO.cs" Line="19" Column="1" />
-      <File FileName="AngularAPI/Models/Category.cs" Line="9" Column="13" />
-      <File FileName="AngularAPI/DTO/LoginUserDTO.cs" Line="11" Column="12" />
-      <File FileName="AngularAPI/Controllers/RoleController.cs" Line="1" Column="1" />
-      <File FileName="AngularAPI/Controllers/ProductController.cs" Line="1" Column="1" />
-      <File FileName="AngularAPI/Controllers/CategoryController.cs" Line="76" Column="42" />
+      <File FileName="AngularAPI/Controllers/ProductController.cs" Line="35" Column="20" />
+      <File FileName="AngularAPI/Program.cs" Line="117" Column="1" />
+      <File FileName="AngularAPI/Models/Product.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AngularAPI" expanded="True" selected="True">
+          <Node name="AngularAPI" expanded="True">
             <Node name="AngularAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="DTO" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Product.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -34,5 +31,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AngularAPI PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>

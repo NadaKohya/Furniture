@@ -14,6 +14,7 @@ h5{
     height: 22.5em;
     margin-bottom: 3em;
     border-radius: .6em;
+    cursor: pointer;
 }
 .card:hover{
     border: 1px solid rgb(211, 142, 39);
