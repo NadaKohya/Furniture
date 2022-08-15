@@ -32,6 +32,9 @@ import { AddproductComponent } from './Components/addproduct/addproduct.componen
 import { NewcategoryComponent } from './Components/newcategory/newcategory.component';
 import { EditcategoryComponent } from './Components/editcategory/editcategory.component';
 import { ProductdetailsComponent } from './Components/productdetails/productdetails.component';
+import { NotfoundpageComponent } from './Components/notfoundpage/notfoundpage.component';
+import { HomelayoutComponent } from './Components/homelayout/homelayout.component';
+import { OtherslayoutComponent } from './Components/otherslayout/otherslayout.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { ProductdetailsComponent } from './Components/productdetails/productdeta
     AddproductComponent,
     NewcategoryComponent,
     EditcategoryComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    NotfoundpageComponent,
+    HomelayoutComponent,
+    OtherslayoutComponent
   ],
   imports: [
   BrowserModule,

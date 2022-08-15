@@ -3,10 +3,6 @@
     margin-top: -2em; 
     padding: 3em 0;
 }
-.header{
-    position: fixed;
-    z-index: +120;
-}
 h1{
     margin: 2em 0 0 .9em;
     font-size: 3em;
