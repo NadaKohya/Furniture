@@ -6,7 +6,7 @@ h5{
 }
 .card{
     width: 14em;
-    height: 22em;
+    height: 23em;
     margin-bottom: 3em;
     border-radius: .6em;
     cursor: pointer;
@@ -23,4 +23,5 @@ i:hover{
 }
 .card-img-top{
     border-bottom: .5px solid;
+    height: 12em;
 }
