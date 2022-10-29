@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{686B50CD-315B-4CA6-8888-9CCB60074217}|Default">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AngularAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Models/Product.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AngularAPI/Controllers/CategoryController.cs">
     <Files>
       <File FileName="AngularAPI/Controllers/ProductController.cs" Line="35" Column="20" />
       <File FileName="AngularAPI/Program.cs" Line="117" Column="1" />
       <File FileName="AngularAPI/Models/Product.cs" Line="1" Column="1" />
+      <File FileName="AngularAPI/Models/Category.cs" Line="1" Column="1" />
+      <File FileName="AngularAPI/Controllers/CategoryController.cs" Line="37" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +19,7 @@
             <Node name="AngularAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="DTO" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Product.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -31,4 +29,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AngularAPI PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>

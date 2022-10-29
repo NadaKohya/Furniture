@@ -41,3 +41,10 @@ input{
     border-radius: .5em;
     width: 25em;
 }
+.error{
+    background-color: rgba(188, 48, 48, 0.276);
+    border-radius: .3em;
+    padding: .5em;
+    margin-top: .2em;
+    font-size: .8em;
+}

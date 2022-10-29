@@ -1,6 +1,7 @@
 <div class="parent">
   <h1>New Category</h1>
   <form
+  [formGroup]="categoryForm"
     class="shadow bg-white d-flex"
   >
       <div class="form-group">
@@ -9,9 +10,15 @@
           type="text"
           id="categoryName"
           class="form-control shadow-sm"
+          name="name"
           placeholder="Name"
-          #name
+          formControlName="name"
+          [class.is-invalid]="name?.touched && name?.invalid"
+          [class.is-valid]="name?.dirty && name?.valid"
         />
+        <div class="error" [hidden]="name?.untouched || name?.valid">
+          Name is required!
+        </div>
         </div>
     <div>
       <button type="submit">Add</button>

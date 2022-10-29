@@ -8,7 +8,7 @@ h1{
     font-size: 3em;
     background-color: rgba(0, 0, 0, 0.822);
     color: white;
-    width: 6em;
+    width: 8em;
     text-align: center;
     border-radius: .3em .3em 0 0;
 }
@@ -50,4 +50,11 @@ textarea{
 img{
     width: 6em;
     height: 6em;
+}
+.error{
+    background-color: rgba(188, 48, 48, 0.276);
+    border-radius: .3em;
+    padding: .5em;
+    margin-top: .2em;
+    font-size: .8em;
 }

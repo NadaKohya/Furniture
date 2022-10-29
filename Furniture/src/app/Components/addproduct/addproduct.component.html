@@ -1,71 +1,94 @@
-<div class="parent">
+<div class="parent" >
   <h1>New Product</h1>
   <form
+  [formGroup]="productForm"
     class="shadow bg-white"
-  >
+    >
     <div class="d-flex">
       <div class="form-group">
         <label>Name</label>
         <input
           type="text"
-          id="proName"
+          id="name"
           class="form-control shadow-sm"
+          name="name"        
+          formControlName="name"
           placeholder="Name"
-          #name
-        />
+          [class.is-invalid]="name?.touched && name?.invalid"
+          [class.is-valid]="name?.dirty && name?.valid"
+          />
+          <div class="error" [hidden]="name?.untouched || name?.valid">
+            Name is required!
+          </div>
       </div>
+
       <div class="form-group">
         <label>Price</label>
         <input
           type="number"
           class="form-control shadow-sm"
+          name="price"
           placeholder="Price"
-          #price
+          formControlName="price"
+          min="1"
+          [class.is-invalid]="price?.touched && price?.invalid"
+          [class.is-valid]="price?.dirty && price?.valid"
         />
+        <div class="error" *ngIf="price?.touched && price?.invalid">
+          {{price?.errors?.['required']? "Price is required!" : "Price should be more than 0"}}
+        </div>
       </div>
-      <div>
+
+      <div class="form-group">
         <label>Category</label>
-        <select (change)="changeCat($event)" class="form-control shadow-sm">
-          <option>--Select--</option>
+        <select (change)="changeCat($event)" class="form-control shadow-sm" name="category" formControlName="category"
+        [class.is-invalid]="category?.touched && category?.invalid"
+        [class.is-valid]="category?.dirty && category?.valid"
+        aria-placeholder="--Select a category--">
+          <option value="">--Select a category--</option>
           <option
             [value]="category.id"
             *ngFor="let category of categories"
-            #categories
           >
             {{ category.name }}
           </option>
         </select>
+        <div class="error" [hidden]="category?.untouched || category?.valid">
+          Category is required!
+        </div>
       </div>
-      </div>
+    </div>
+
       <div class="d-flex">
         <div class="form-group">
           <label>Description</label>
           <textarea
             type="text"
             class="form-control shadow-sm"
+            name="description"
             placeholder="Description"
-            #description
+          formControlName="description"
          ></textarea>
         </div>
+
         <div>
           <label>Best Selling</label>
-          <select (change)="changeCat($event)" class="form-control shadow-sm">
-            <option>--Select--</option>
+          <select (change)="changeCat($event)" class="form-control shadow-sm" name="bestSelling" formControlName="bestSelling" aria-placeholder="--Select--">
+            <option value="">--Select--</option>
             <option
               value="True"
-              #best
             >
             True
             </option>
             <option
             value="False"
-            #best
           >
           False
           </option>
           </select>
         </div>
       </div>
+
       <div class="d-flex">
       <div>
         <div>
@@ -76,7 +99,9 @@
           type="file"
           style="width: 14em; background-color: rgba(128, 128, 128, 0.422);"
           (change)="OnSelect($event)"
-          #image1
+name="image1"
+formControlName="image1"
+placeholder="Choose an image"
         />
       </div>
       <!-- <div>
@@ -104,3 +129,4 @@
     </div>
   </form>
 </div>
+{{productForm.value | json}}

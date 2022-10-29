@@ -19,6 +19,7 @@ import { ProductscrudComponent } from './Components/productscrud/productscrud.co
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
+  {path:"outer",component:OuterPageComponent},
   {path:"home",component:HomeComponent},
   {path:"",component:OtherslayoutComponent,children:[
     {path:"home/mattress",component:MattressComponent},
