@@ -66,6 +66,6 @@ export class EditproductComponent implements OnInit {
     product.image1 = '../../../assets/' + this.image1;
     product.categoryId = this.categoryId;
     console.log(product);
-    this.myProductService.updateProduct(this.produuctId, product).subscribe();
+   
   }
 }

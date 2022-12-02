@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UrlService } from './url.service';
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,18 @@ export class CategoryService {
 
   URL=this.urlService.categoryURL;
 
-  constructor(private HttpClient:HttpClient, public urlService:UrlService) { }
+  constructor(
+    private HttpClient:HttpClient,
+    public urlService:UrlService,
+    public loginService:LoginService
+    ){}
+
+    httpOptions={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        Authorization:`Bearer $this.loginService.getToken()`
+      })
+    }
 
     getAllCategories(){
       return this.HttpClient.get(this.URL);
@@ -18,12 +30,12 @@ export class CategoryService {
       return this.HttpClient.get(this.URL+"/"+id);
     }
     addNewCategory(Category:any){
-      return this.HttpClient.post(this.URL, Category);
+      return this.HttpClient.post(this.URL, Category, this.httpOptions);
     }
     updateCategory(id:any, Category:any){
-      return this.HttpClient.put(this.URL+"/"+id, Category);
+      return this.HttpClient.put(this.URL+"/"+id, Category, this.httpOptions);
     }
     deleteCategory(id:any){
-      return this.HttpClient.delete(this.URL+"/"+id);
+      return this.HttpClient.delete(this.URL+"/"+id, this.httpOptions);
     }
 }

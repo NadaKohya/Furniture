@@ -26,7 +26,7 @@ namespace AngularAPI.Controllers
             this.configuration = configuration;
         }
 
-        //Create New Account (Registeration) "Post==body"
+    
         [HttpPost("register")]
         public async Task<IActionResult> Registeration(RegisterUserDTO userDTO)
         {
@@ -91,10 +91,10 @@ namespace AngularAPI.Controllers
                         });
                     }
                 }
-                return BadRequest();
+                return Unauthorized();
 
             }
-            return Unauthorized();
+            return BadRequest();
         }
        
 

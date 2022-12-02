@@ -35,8 +35,9 @@ export class LoginComponent implements OnInit {
     console.log("login button is clicked")
     this.loginService.login(this.loginForm.value).subscribe(
       data => {
-        console.log(data)
-        localStorage.setItem('token',(<any>data).token);
+    console.log("login button is clicked")
+    console.log(data)
+        localStorage.setItem('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiTmFkYSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZDc1M2MyZTctNzJhZi00MTg4LTg4ZjEtYzBmYjFjZmI2YWYzIiwianRpIjoiMjgxYTI5MjAtMmVhNy00M2ViLThjNTMtYTZhNzE2MTEyYzU3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NzAwMzIxNTAsImlzcyI6IioiLCJhdWQiOiIqIn0.BsIiNaeXbGJb9ioxy-KGbjAOTmjkT89RdwEjjOdWvGU');
         this.router.navigate(['/home']);
         setTimeout(() => {
           this.loginService.logOut();
