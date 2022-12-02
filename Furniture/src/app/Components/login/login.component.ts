@@ -12,14 +12,13 @@ import { TimeoutError } from 'rxjs';
 export class LoginComponent implements OnInit {
   requestTimeOut = false;
 
-  
   constructor(public loginService: LoginService, private router: Router) {}
   
   ngOnInit(): void {}
 
   loginForm = new FormGroup({
     UserName: new FormControl('', Validators.required),
-    Password: new FormControl('', Validators.required),
+    Password: new FormControl('', Validators.required)
   });
 
   get Name() {
@@ -32,12 +31,10 @@ export class LoginComponent implements OnInit {
 
   login(event: MouseEvent) {
     (event.target as HTMLButtonElement).disabled = true;
-    console.log("login button is clicked")
+    if(this.loginForm.valid)
     this.loginService.login(this.loginForm.value).subscribe(
       data => {
-    console.log("login button is clicked")
-    console.log(data)
-        localStorage.setItem('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiTmFkYSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZDc1M2MyZTctNzJhZi00MTg4LTg4ZjEtYzBmYjFjZmI2YWYzIiwianRpIjoiMjgxYTI5MjAtMmVhNy00M2ViLThjNTMtYTZhNzE2MTEyYzU3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NzAwMzIxNTAsImlzcyI6IioiLCJhdWQiOiIqIn0.BsIiNaeXbGJb9ioxy-KGbjAOTmjkT89RdwEjjOdWvGU');
+    this.loginService.setToken(data);
         this.router.navigate(['/home']);
         setTimeout(() => {
           this.loginService.logOut();

@@ -26,7 +26,7 @@ namespace AngularAPI.Controllers
             this.configuration = configuration;
         }
 
-    
+
         [HttpPost("register")]
         public async Task<IActionResult> Registeration(RegisterUserDTO userDTO)
         {
@@ -50,53 +50,54 @@ namespace AngularAPI.Controllers
 
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginUserDTO userDTO)
+        public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
         {
             if (ModelState.IsValid == true)
             {
-                ApplicationUser user = await userManager.FindByNameAsync(userDTO.UserName);
-                if (user != null)
+            ApplicationUser user = await userManager.FindByNameAsync(userDTO.UserName);
+            if (user != null)
+            {
+                bool found = await userManager.CheckPasswordAsync(user, userDTO.Password);
+                if (found)
                 {
-                    bool found = await userManager.CheckPasswordAsync(user, userDTO.Password);
-                    if (found)
+
+                    var claims = new List<Claim>();
+                    claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+                    claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
+                    claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
+
+                    var roles = await userManager.GetRolesAsync(user);
+                    foreach (var itemRole in roles)
                     {
-                      
-                        var claims = new List<Claim>();
-                        claims.Add(new Claim(ClaimTypes.Name, user.UserName));
-                        claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
-                        claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-
-                        var roles = await userManager.GetRolesAsync(user);
-                        foreach (var itemRole in roles)
-                        {
-                            claims.Add(new Claim(ClaimTypes.Role, itemRole));
-                        }
-                        SecurityKey securityKey =
-                            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"]));
-
-                        SigningCredentials signincred =
-                            new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-                       
-                        JwtSecurityToken mytoken = new JwtSecurityToken(
-                            issuer: configuration["JWT:ValidIssuer"],
-                            audience: configuration["JWT:ValidAudience"],
-                            claims: claims,
-                            expires: DateTime.Now.AddHours(5),
-                            signingCredentials: signincred
-                            );
-                        return Ok(new
-                        {
-                            token = new JwtSecurityTokenHandler().WriteToken(mytoken),
-                            expiration = mytoken.ValidTo
-                        });
+                        claims.Add(new Claim(ClaimTypes.Role, itemRole));
                     }
-                }
-                return Unauthorized();
+                    SecurityKey securityKey =
+                        new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"]));
 
+                    SigningCredentials signincred =
+                        new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+                    JwtSecurityToken mytoken = new JwtSecurityToken(
+                        issuer: configuration["JWT:ValidIssuer"],
+                        audience: configuration["JWT:ValidAudience"],
+                        claims: claims,
+                        expires: DateTime.Now.AddHours(5),
+                        signingCredentials: signincred
+                        );
+                    return Ok(new
+                    {
+                        token = new JwtSecurityTokenHandler().WriteToken(mytoken),
+                        expiration = mytoken.ValidTo
+                    });
+                }
+                else return Unauthorized();
             }
-            return BadRequest();
+            else return NotFound("User is not found");
+
         }
-       
+          else return Unauthorized();
+      }
+
 
         //Add Admin
         [HttpPost("addAdmin")]

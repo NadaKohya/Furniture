@@ -39,7 +39,7 @@ builder.Services.AddDbContext<FurnitureContext>(options =>
     options.UseSqlServer("Server=localhost;Database=Furniture;User=SA;Password=307462Nada");
 });
 
-//builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddControllers();
 
@@ -84,7 +84,7 @@ builder.Services.AddSwaggerGen(swagger =>
 builder.Services.AddCors(corsOptions => {
     corsOptions.AddPolicy("MyPolicy", corsPolicyBuilder =>
     {
-        corsPolicyBuilder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        corsPolicyBuilder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
     });
 });
 
