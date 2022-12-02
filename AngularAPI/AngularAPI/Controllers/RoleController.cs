@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularAPI.Controllers
 {
-    //[Authorize(Roles="Admin")]
+    [Authorize(Roles="Admin")]
     [Route("api/[controller]")]
     public class RoleController : Controller
     {

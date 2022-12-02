@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { OuterPageComponent } from './Components/outer-page/outer-page.component';
 import { HomeComponent } from './Components/home/home.component';
 import { MattressComponent } from './Components/mattress/mattress.component';
 import { LivingroomComponent } from './Components/livingroom/livingroom.component';
@@ -34,12 +33,12 @@ import { EditcategoryComponent } from './Components/editcategory/editcategory.co
 import { ProductdetailsComponent } from './Components/productdetails/productdetails.component';
 import { NotfoundpageComponent } from './Components/notfoundpage/notfoundpage.component';
 import { OtherslayoutComponent } from './Components/otherslayout/otherslayout.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    OuterPageComponent,
     HomeComponent,
     MattressComponent,
     LivingroomComponent,
@@ -62,7 +61,8 @@ import { OtherslayoutComponent } from './Components/otherslayout/otherslayout.co
     EditcategoryComponent,
     ProductdetailsComponent,
     NotfoundpageComponent,
-    OtherslayoutComponent
+    OtherslayoutComponent,
+    LoginComponent
   ],
   imports: [
   BrowserModule,

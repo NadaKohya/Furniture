@@ -1,5 +1,5 @@
 <div class="card shadow p-3 mb-5 bg-white" [routerLink]="['/product',productItem.id]">
-    <img class="card-img-top" src="../../../assets/{{productItem.image1}}" alt="Card image cap">
+    <img class="card-img-top" src="../../../assets/{{productItem.image1}}" alt="Card image cap" loading="lazy">
     <div class="card-body">
      <h6>{{productItem.category.name}}</h6>
      <h5>{{productItem.name}}</h5>

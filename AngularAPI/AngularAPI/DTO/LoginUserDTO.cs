@@ -6,11 +6,10 @@ namespace AngularAPI.DTO
 	public class LoginUserDTO
 	{
 		[Required]
-		public string? Name { get; set; }
-		[DataType(DataType.Password)]
+		public string? UserName { get; set; }
 		[Required]
 		public string? Password { get; set; }
-		public bool RememberMe { get; set; }
+		//public bool RememberMe { get; set; }
 	}
 }
 

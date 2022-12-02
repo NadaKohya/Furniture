@@ -34,7 +34,7 @@ namespace AngularAPI.Controllers
             {
                 //Save
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = userDTO.Name;
+                user.UserName = userDTO.UserName;
                 user.Email = userDTO.Email;
                 IdentityResult result = await userManager.CreateAsync(user, userDTO.Password);
                 if (result.Succeeded)
@@ -48,62 +48,55 @@ namespace AngularAPI.Controllers
             return BadRequest(ModelState);
         }
 
-        //Check Account Credentials (Login) "Post==body"
+
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginUserDTO userDTO)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid == true)
             {
-                //Check credentials
-                //1-find user by name
-                ApplicationUser user = await userManager.FindByNameAsync(userDTO.Name);
-
+                ApplicationUser user = await userManager.FindByNameAsync(userDTO.UserName);
                 if (user != null)
                 {
-                    //2-check if the user has the same password of userDto
                     bool found = await userManager.CheckPasswordAsync(user, userDTO.Password);
-
                     if (found)
                     {
-                        //Token claims
+                      
                         var claims = new List<Claim>();
                         claims.Add(new Claim(ClaimTypes.Name, user.UserName));
                         claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
                         claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
 
-                        //Get role
                         var roles = await userManager.GetRolesAsync(user);
                         foreach (var itemRole in roles)
                         {
                             claims.Add(new Claim(ClaimTypes.Role, itemRole));
                         }
+                        SecurityKey securityKey =
+                            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"]));
 
-                        //Security Key
-                        SecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"]));
-
-                        //Signing Credentials
-                        SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-                        //Create token
-                        JwtSecurityToken myToken = new JwtSecurityToken(
-                            issuer: configuration["JWT:ValidIssuer"], //URL of provider
-                            audience: configuration["JWT:ValidConsumer"], //URL of consumer
+                        SigningCredentials signincred =
+                            new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+                       
+                        JwtSecurityToken mytoken = new JwtSecurityToken(
+                            issuer: configuration["JWT:ValidIssuer"],
+                            audience: configuration["JWT:ValidAudience"],
                             claims: claims,
                             expires: DateTime.Now.AddHours(5),
-                            signingCredentials: signingCredentials
+                            signingCredentials: signincred
                             );
                         return Ok(new
                         {
-                            token = new JwtSecurityTokenHandler().WriteToken(myToken),
-                            expiration = myToken.ValidTo
+                            token = new JwtSecurityTokenHandler().WriteToken(mytoken),
+                            expiration = mytoken.ValidTo
                         });
                     }
-                    return Unauthorized();
                 }
-                return Unauthorized();
+                return BadRequest();
+
             }
             return Unauthorized();
         }
+       
 
         //Add Admin
         [HttpPost("addAdmin")]
@@ -113,7 +106,7 @@ namespace AngularAPI.Controllers
             {
                 //Save
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = userDTO.Name;
+                user.UserName = userDTO.UserName;
                 user.Email = userDTO.Email;
                 IdentityResult result = await userManager.CreateAsync(user, userDTO.Password);
                 if (result.Succeeded)
