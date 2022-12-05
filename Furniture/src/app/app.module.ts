@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +34,7 @@ import { ProductdetailsComponent } from './Components/productdetails/productdeta
 import { NotfoundpageComponent } from './Components/notfoundpage/notfoundpage.component';
 import { OtherslayoutComponent } from './Components/otherslayout/otherslayout.component';
 import { LoginComponent } from './Components/login/login.component';
+import { TokenInterceptor } from './Interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,7 @@ import { LoginComponent } from './Components/login/login.component';
     LoginComponent
   ],
   imports: [
-  BrowserModule,
+BrowserModule,
   BrowserAnimationsModule,
   FormsModule,
   ReactiveFormsModule,
@@ -75,6 +76,11 @@ import { LoginComponent } from './Components/login/login.component';
     NgbModule
   ],
   providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+  },
     ProductService,
     CategoryService
   ],

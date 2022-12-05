@@ -33,13 +33,13 @@ export class ProductService {
       return this.HttpClient.get(`${this.URL}/category/${CategoryId}`)
     }
     addNewProduct(product:any){
-      return this.HttpClient.post(this.URL, product, this.httpOptions);
+      return this.HttpClient.post(this.URL, product);
     }
     updateProduct(id:any, product:any){
-      return this.HttpClient.put(this.URL+"/"+id, product), this.httpOptions;
+      return this.HttpClient.put(this.URL+"/"+id, product);
     }
     deleteProduct(id:any){
-      return this.HttpClient.delete(this.URL+"/"+id, this.httpOptions);
+      return this.HttpClient.delete(this.URL+"/"+id);
     }
   
 }
