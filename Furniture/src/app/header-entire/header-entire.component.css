@@ -1,26 +1,76 @@
-.navbar{
-    background-color: #282727;
-    width: 2000px;
+.header{
     color: hsl(0, 0%, 75%);
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-border-bottom: 1.5px solid orange;
-}
-.nav-link {
-    color: hsl(0, 100%, 99%);
-}
-.navbar-nav{
+    height: 4em;
+    padding: .7em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
     justify-content: space-between;
-    width: 80%;
-    margin: auto;
+}
+.fa-couch{
+    font-size: 2.5em;
+    color: rgb(211, 142, 39);
+}
+.comfort-text{
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1;
+    margin-left: .7em;
+    color: white;
+}
+.seat-text{
+font-weight: 800;
+font-size: 1.2em;
+line-height: .8;
+margin-left: 1.2em;
+color: rgb(211, 142, 39);
+}
+.links{
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    width: 50%;
 }
 .navRouting{
+    color: hsl(0, 100%, 99%);
 	font-weight: 400;
     font-size: 1em;
+    text-decoration: none;
 }
-.header{
-    position: fixed;
-    top: 0%;
+.nav-item{
+    list-style: none;
+}
+.dropdown-toggle{
+    color: hsl(0, 100%, 99%);
+}
+.dropdown-menu{
+    background-color:rgba(0, 0, 0, 0.85);
 }
 .dropdown-item:hover{
     color:orange;
     }
+    .right-part{
+        align-items: center;
+        padding-left: 4em;
+    }
+    .right-icons{
+        justify-content: space-between;
+        width: 50%;
+    }
+    .bi-search{
+        font-size: 1.5em;
+        color: rgb(211, 142, 39);
+    }
+    .bi-person{
+        font-size: 2em;
+        color:rgb(211, 142, 39);
+    }
+    .bi-cart{
+        font-size: 2em;
+        color:rgb(211, 142, 39);
+    }
+    .welcome-message{
+    color: white;
+    font-size: 1em;
+    text-align: center;
+        }

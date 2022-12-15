@@ -32,6 +32,7 @@ authorizationError=false;
 if(err instanceof HttpErrorResponse){
   if(err.status==401){
     this.authorizationError=true;
+    this.loginService.logOut();
   }
 }
 return throwError(()=>"Another error occured!");

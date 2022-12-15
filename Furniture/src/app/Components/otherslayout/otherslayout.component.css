@@ -1,4 +1,7 @@
 .header{
     position: fixed;
     z-index: +120;
+    width: 100vw;
+    background-color: #282727;
+border-bottom: 1.5px solid orange;
 }
