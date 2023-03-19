@@ -1,33 +1,41 @@
 .all{
     background-image: url("../../../assets/HomeHeader.jpg");
+background-size: cover;
     height: 64em;
     margin-bottom: 3.5em;
 }
-
-.navbar{
-    /* background-color: rgba(0, 0, 0, 0.85); */
-    width: 2000px;
+.header{
     color: hsl(0, 0%, 75%);
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.nav-link {
-    color: hsl(0, 100%, 99%);
-}
-.navbar-nav{
+    height: 4em;
+    padding: .7em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 6em;
 }
-.navRouting{
-	font-weight: 400;
-    font-size: 1em;
+.fa-couch{
+    font-size: 2.5em;
+    color: rgb(211, 142, 39);
+}
+.comfort-text{
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 1;
+    margin-left: .7em;
+    color: white;
+}
+.seat-text{
+font-weight: 800;
+font-size: 1.2em;
+line-height: .8;
+margin-left: 1.2em;
+color: rgb(211, 142, 39);
 }
 .mainText{
     font-size: 4em;
     font-weight:700;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 color: white;
-margin-left: 3.3em;
+text-align: center;
 margin-top: 1.2em;
 }
 .searchbar{
@@ -64,6 +72,53 @@ margin-top: 1.2em;
     background-color: rgb(211, 142, 39);
     }
 
-.dropdown-item:hover{
-color:orange;
+    .links{
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+        width: 50%;
+    }
+    .navRouting{
+        color: hsl(0, 100%, 99%);
+        font-weight: 400;
+        font-size: 1em;
+        text-decoration: none;
+    }
+    .nav-item{
+        list-style: none;
+    }
+    .dropdown-toggle{
+        color: hsl(0, 100%, 99%);
+    }
+    .dropdown-menu{
+        background-color:rgba(0, 0, 0, 0.85);
+    }
+    .dropdown-item:hover{
+        color:orange;
+        }
+.right-part{
+    align-items: center;
+    padding-left: 4em;
 }
+.right-icons{
+    justify-content: space-between;
+    width: 50%;
+}
+.bi-search{
+    font-size: 1.5em;
+    color: rgb(211, 142, 39);
+}
+.bi-person{
+    font-size: 2em;
+    color:rgb(211, 142, 39);
+}
+.bi-cart{
+    font-size: 2em;
+    color:rgb(211, 142, 39);
+}
+.welcome-message{
+color: white;
+font-size: 1em;
+text-align: center;
+    }
